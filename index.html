@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <link rel="stylesheet" href="style.css">
+  <title>Meu Portfólio</title>
+</head> 
+<body>
+
+    <!-- ===== MENU FIXO ===== -->
+    <nav class="navbar">
+        <div class="logo">David</div>
+
+        <ul class="nav-links">
+            <li><a href="#hero">Início</a></li>
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#experiencias">Experiências</a></li>
+            <li><a href="#cursos">Cursos</a></li>
+            <li><a href="#contato">Contato</a></li>
+        </ul>
+    </nav>
+  
+<!-- SECTION: cria uma área/seção da página -->
+<section id="hero" class="hero">
+
+  <!-- DIV: é um contêiner. "hero-container" é o nome da classe usada no CSS -->
+  <div class="hero-container">
+    <!-- foto perfil do topo -->
+    <img src="img/imgperfil.jpg" class="hero-foto animar" alt="foto de David Pereira">
+
+    <!-- h1: título principal da página -->
+    <h1 class="animar">David Pereira</h1>
+
+    <!-- h2: subtítulo -->
+    <h2 class="animar">Profissional Multissetorial</h2>
+
+    <!-- p: parágrafo de texto -->
+    <p class="animar">experiência em
+    Logística • Bordado Industrial • Eletricidade • Tecnologia • Operação de Máquinas</p>
+
+    <!-- a: link. Aqui funciona como um botão -->
+    <a href="https://wa.me/5516996123471" class="hero-btn animar" target="_blank">
+    Entrar em Contato
+</a>
+  </div>
+</section>
+
+<!-- SOBRE MIM -->
+<section id="sobre" class="sobre">
+  
+  <!-- Título da seção -->
+  <h2>Sobre Mim</h2>
+
+  <!-- Contêiner do texto -->
+  <p>
+    Sou David, um profissional versátil e apaixonado por tecnologia.  
+    Residente de Itápolis há 14 anos, construí minha experiência nas áreas de  
+    logística, bordado industrial, elétrica, operação de máquinas e serviços gerais.  
+    Gosto de aprender de tudo e estou sempre evoluindo meus conhecimentos.
+  </p>
+
+</section>
+<!-- ===== EXPERIÊNCIAS ===== -->
+<section id="experiencias" class="experiencias">
+    <h2>Experiências</h2>
+
+    <div class="exp-container">
+
+        <!-- CARD 1 -->
+        <div class="exp-card">
+            <h3>Bordado Industrial</h3>
+            <p>1 ano em embalagem • 1 ano em máquina computadorizada • 1 ano em logística (separação, estoque, expedição).</p>
+        </div>
+
+        <!-- CARD 2 -->
+        <div class="exp-card">
+            <h3>Logística & Serviços Gerais</h3>
+            <p>Experiência em separação de mercadorias, embalagem, conferência, estoque e suporte operacional.</p>
+        </div>
+
+        <!-- CARD 3 -->
+        <div class="exp-card">
+            <h3>Motoboy & Moto-Taxi</h3>
+            <p>Atuação com entregas rápidas, coletas e transporte urbano.</p>
+        </div>
+
+        <!-- CARD 4 -->
+        <div class="exp-card">
+            <h3>Elétrica e Máquinas</h3>
+            <p>Conhecimentos em elétrica residencial, motores elétricos e operação de tratores e máquinas pesadas.</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- ===== CURSOS & APRENDIZADO ===== -->
+<section id="cursos" class="cursos">
+    <h2>Cursos & Aprendizado</h2>
+
+    <div class="cursos-container">
+
+        <!-- ===== CARD DO CURSO DE ELETRICISTA ===== -->
+        <div class="curso-card">
+
+            <!--<img class="curso-capa" src="imagemeletricista.png" alt="Curso Eletricista">-->
+
+            <h3>Eletricista – Instalações Elétricas</h3>
+            <p>Curso de 32h sobre instalações elétricas em baixa tensão, normas, EPIs e execução prática.</p>
+
+            <button class="btn-certificado" onclick="abrirModal('cert-eletricista')">
+                Ver Certificado
+            </button>
+
+        </div>
+        <!-- ===== FIM DO CARD ===== -->
+
+    </div>
+</section>
+
+  <!-- MODAL DO CERTIFICADO -->
+<div id="cert-eletricista" class="modal">
+    <div class="modal-content">
+        <span class="fechar" onclick="fecharModal('cert-eletricista')">&times;</span>
+
+        <iframe 
+            src="pdf/instalacoes.pdf" 
+            class="pdf-viewer">
+        </iframe>
+    </div>
+</div>
+
+<script>
+function abrirModal(id) {
+    document.getElementById(id).style.display = "flex";
+}
+
+function fecharModal(id) {
+    document.getElementById(id).style.display = "none";
+}
+
+// NOVO: Fecha o modal se clicar fora do conteúdo
+document.addEventListener('click', function(event) {
+    // Verifica se o elemento clicado tem a classe 'modal'
+    if (event.target.classList.contains('modal')) {
+        event.target.style.display = "none";
+    }
+});
+</script>
+</body>
+</html>
